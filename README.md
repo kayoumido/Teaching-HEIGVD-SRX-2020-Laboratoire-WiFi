@@ -192,7 +192,7 @@ aircrack-ng <nom-du-fichier-capture> -w <nom-du-dictionnaire>
 >
 > ![pings](./images/wpa_pings.png)
 >
-> Nom de Domaine : ?  Malheureusement cette information n'est pas accessible dans la capture on peu néanmoins utiliser un outil tel que [who is](https://whois.domaintools.com) pour chercher les inforations liées a cette ip. On peut donc voir que c'est une IP qui appartient a Facebook Pays-bas et dont le nom de domaine est `facebook.com`
+> Nom de Domaine : ?  Malheureusement cette information n'est pas accessible dans la capture on peu néanmoins utiliser un outil tel que [who is](https://whois.domaintools.com) pour chercher les inforations liées a cette ip. On peut donc voir que c'est une IP qui appartient a Facebook Pays-bas et dont le nom de domaine est `edge-star-mini-shv-01-amt2.facebook.com`
 
 
 
@@ -211,6 +211,6 @@ Nous avons enlevé une seule trame (choisie stratégiquement) du fichier de capt
 ---
 > **_Question :_** Sur la base de votre réponse précédente, arrivez-vous à déduire quelle trame a été effacée ?
 
-> **_Réponse :_**  Il manque la deuxième trame du 4-Way handshake aircrack ne peut donc pas récupérer le supplicant nonce affin de générer toutes les clés
+> **_Réponse :_**  Il manque la deuxième trame du 4-Way handshake aircrack ne peut donc pas récupérer le `supplicant nonce` affin de générer toutes les clés
 >
 > ![missing trame](./images/missing_trame.png)
