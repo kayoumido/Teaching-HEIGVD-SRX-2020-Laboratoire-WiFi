@@ -176,22 +176,23 @@ aircrack-ng <nom-du-fichier-capture> -w <nom-du-dictionnaire>
 
 > **_Question :_** Combien de temps avez-vous attendu pour obtenir la passphrase WPA ?
 > 
-> **_Réponse :_** 
+> **_Réponse :_**  23 secondes
 
 ---
 > **_Montrer une capture d'écran de l'obtention de la passphrase WPA_**
-> 
-> **_Capture ici_** 
+>
+> ![recupération passphrase](./images/aircrack_wpa.png)
 
 ---
 > **_Question :_** Lors de la capture, la cible a fait un « ping » sur un serveur. Arrivez-vous à dire de quel serveur il s’agit ?
 
-> 
 > **_Réponse :_** 
-> 
-> Adresse IP du serveur : ?
 >
-> Nom de Domaine : ?
+> Adresse IP du serveur : ? `31.13.64.35`
+>
+> ![pings](./images/wpa_pings.png)
+>
+> Nom de Domaine : ?  Malheureusement cette information n'est pas accessible dans la capture on peu néanmoins utiliser un outil tel que [who is](https://whois.domaintools.com) pour chercher les inforations liées a cette ip. On peut donc voir que c'est une IP qui appartient a Facebook Pays-bas et dont le nom de domaine est `facebook.com`
 
 
 
@@ -202,12 +203,14 @@ Nous avons enlevé une seule trame (choisie stratégiquement) du fichier de capt
 * Répondre aux questions suivantes :
 
 > **_Question :_** Est-ce que vous arrivez à refaire l'exercice ? Pourquoi ou pourquoi pas ?
-> 
-> **_Réponse :_** 
+>
+> **_Réponse :_**  Non car aircrack ne trouve aucun réseau dans la capture qui serait potentiellement attacable
+>
+> ![pas de réseau disponible](./images/missing_network.png)
 
 ---
 > **_Question :_** Sur la base de votre réponse précédente, arrivez-vous à déduire quelle trame a été effacée ?
 
-> 
-> **_Réponse :_** 
-> 
+> **_Réponse :_**  Il manque la deuxième trame du 4-Way handshake aircrack ne peut donc pas récupérer le supplicant nonce affin de générer toutes les clés
+>
+> ![missing trame](./images/missing_trame.png)
