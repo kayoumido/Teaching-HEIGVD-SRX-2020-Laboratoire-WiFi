@@ -43,21 +43,28 @@ Nous savons que la cible s’est hébergée à l’hôtel « Black Rain » et qu
 > **_Question :_** Quel filtre avez-vous utilisé
 > 
 > **_Réponse :_** 
+wlan.fc.type_subtype == 4, 
+trouvé [ici](https://www.semfionetworks.com/uploads/2/9/8/3/29831147/wireshark_802.11_filters_-_reference_sheet.pdf)  
+![MAC cible](images/mac_cible.png)  
+Si on trie la capture par source on s'aperçois qu'un seul appareil a été dans les deux lieux mentionnés dans la donnée on peut donc en déduire que c'est notre cible.
 
 ---
 > **_Question :_** Quel est l’adresse MAC de la cible ?
 > 
-> **_Réponse :_** 
+> **_Réponse :_** fc:f1:36:22:49:74 (SamsungE_22:49:74)
 
 ---
 > **_Question :_** Quel est le nom du constructeur de l’interface sans fils de la cible ?
 > 
-> **_Réponse :_** 
+> **_Réponse :_** Samsung
 
 ---
 > **_Question :_** Quel autres endroits la cible a-t-elle probablement visités ?
 > 
 > **_Réponse :_** 
+* Migros
+* Aeroport de genéve
+* La boulangerie `Fleur de Pains`
 
 ---
 
