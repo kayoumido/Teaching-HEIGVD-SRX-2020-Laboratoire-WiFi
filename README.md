@@ -147,8 +147,14 @@ Nous utiliserons Wireshark pour trouver l’authentification WPA contenue dans l
 * Analyser les messages du 4-way handshake. En particulier, essayer de trouver les chiffres aléatoires (Nonces) échangés entre le client et l’AP.
 
 > **_Fournir une capture d'écran des chiffres aléatoires_**
-> 
-> **_Capture ici_** 
+>
+> Authenticator nonce:
+>
+> ![authenticator nonce](./images/nounce1.png)
+>
+> Supplicant nonce:
+>
+> ![supplicant nonce](./images/nounce2.png)
 
 ---
 
