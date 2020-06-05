@@ -4,7 +4,7 @@ Vous aurez besoin de ``Wireshark`` et du logiciel ``aircrack-ng`` pour ce labora
 
 Si vous utilisez une distribution Kali, tout est déjà pré-installé. Pour la version Windows du logiciel ``aircrack-ng``ou pour son installation sur d'autres distributions, référez-vous au
 [site web aircrack-ng](https://aircrack-ng.org) et/ou au gestionnaire de paquets de votre distribution.
- 
+
 # Identification d'un dispositif
 
 ## Introduction
@@ -43,15 +43,14 @@ Nous savons que la cible s’est hébergée à l’hôtel « Black Rain » et qu
 > **_Question :_** Quel filtre avez-vous utilisé
 > 
 > **_Réponse :_** 
-wlan.fc.type_subtype == 4, 
-trouvé [ici](https://www.semfionetworks.com/uploads/2/9/8/3/29831147/wireshark_802.11_filters_-_reference_sheet.pdf)  
+`wlan.fc.type_subtype == 4`, trouvé [ici](https://www.semfionetworks.com/uploads/2/9/8/3/29831147/wireshark_802.11_filters_-_reference_sheet.pdf)  
 ![MAC cible](images/mac_cible.png)  
 Si on trie la capture par source on s'aperçois qu'un seul appareil a été dans les deux lieux mentionnés dans la donnée on peut donc en déduire que c'est notre cible.
 
 ---
 > **_Question :_** Quel est l’adresse MAC de la cible ?
 > 
-> **_Réponse :_** fc:f1:36:22:49:74 (SamsungE_22:49:74)
+> **_Réponse :_** `fc:f1:36:22:49:74` (SamsungE_22:49:74)
 
 ---
 > **_Question :_** Quel est le nom du constructeur de l’interface sans fils de la cible ?
@@ -110,17 +109,19 @@ Maintenant que vous avez la clé WEP, configurez la dans Wireshark afin de déch
 
 > **_Question :_** Combien de temps avez-vous attendu pour obtenir la clé WEP ?
 > 
-> **_Réponse :_** 
+> **_Réponse :_**  c'était instantané
 
 ---
 > **_Montrer une capture d'écran de l'obtention de la clé WEP_**
 > 
-> **_Capture ici_** 
+> ![Capture clé WEP](./images/capture_wep.png)
 
 ---
 > **_Question :_** Arrivez-vous à récupérer les informations d’identification (credentials) de l’authentification basique http contenue dans la capture ?
-> 
-> **_Réponse :_** 
+>
+> **_Réponse :_** oui
+>
+> ![credentials](./images/credentials_wep.png)
 
 ---
 
@@ -158,7 +159,7 @@ Nous allons nous servir de l’outil aircrack-ng et d’un dictionnaire pour ret
 
 * Copier [le dictionnaire](files/french_dico.txt) sur votre machine locale 
 * Utilisez aircrack-ng en ligne de commandes pour cracker la passphrase du réseau WPA avec le même [fichier de capture chiffrée avec WPA](files/coursWLAN-WPA.cap) que vous avez déjà copié.
- 
+
 ```
 aircrack-ng <nom-du-fichier-capture> -w <nom-du-dictionnaire>
 ```
