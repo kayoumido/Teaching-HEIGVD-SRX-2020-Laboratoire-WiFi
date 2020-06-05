@@ -60,10 +60,7 @@ Si on trie la capture par source on s'aperçois qu'un seul appareil a été dans
 ---
 > **_Question :_** Quel autres endroits la cible a-t-elle probablement visités ?
 > 
-> **_Réponse :_** 
-* Migros
-* Aeroport de genéve
-* La boulangerie `Fleur de Pains`
+> **_Réponse :_** La cible a probablement visités la `Migros`, l'`aeroport de genève` et la boulangerie `Fleur de pains`.
 
 ---
 
@@ -188,11 +185,11 @@ aircrack-ng <nom-du-fichier-capture> -w <nom-du-dictionnaire>
 
 > **_Réponse :_** 
 >
-> Adresse IP du serveur : ? `31.13.64.35`
+> Adresse IP du serveur : `31.13.64.35`
 >
 > ![pings](./images/wpa_pings.png)
 >
-> Nom de Domaine : ?  Malheureusement cette information n'est pas accessible dans la capture on peu néanmoins utiliser un outil tel que [who is](https://whois.domaintools.com) pour chercher les inforations liées a cette ip. On peut donc voir que c'est une IP qui appartient a Facebook Pays-bas et dont le nom de domaine est `edge-star-mini-shv-01-amt2.facebook.com`
+> Nom de Domaine : Malheureusement cette information n'est pas accessible dans la capture. On peu néanmoins utiliser un outil tel que [who is](https://whois.domaintools.com) pour chercher les inforations liées a cette ip. On peut donc voir que c'est une IP qui appartient a Facebook Pays-bas et dont le nom de domaine est `edge-star-mini-shv-01-amt2.facebook.com`
 
 
 
@@ -204,7 +201,7 @@ Nous avons enlevé une seule trame (choisie stratégiquement) du fichier de capt
 
 > **_Question :_** Est-ce que vous arrivez à refaire l'exercice ? Pourquoi ou pourquoi pas ?
 >
-> **_Réponse :_**  Non car aircrack ne trouve aucun réseau dans la capture qui serait potentiellement attacable
+> **_Réponse :_**  Non car aircrack ne trouve aucun réseau dans la capture qui serait potentiellement attaquable
 >
 > ![pas de réseau disponible](./images/missing_network.png)
 
